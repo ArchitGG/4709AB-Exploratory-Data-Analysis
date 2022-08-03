@@ -5,10 +5,53 @@ date: '2022-08-02'
 output: html_document
 
 ## R Markdown
-##Introduction:
-##COVID-19 is extremely rampant and dangerous in many parts of the world, causing data analysis to be necessary in order to find the best means of prevention amongst all age groups, races, and genders. Amongst the multitude of data analysis projects regarding COVID-19 cases, there seems to be a lack of projects focusing on the vaccination rates and strategies for combatting this horrible pandemic. The dataset that we used for our analysis was created by Paul Mooney, who took data derived from ourworldindata.org and organized it into a dataset. There are 33812 observations and 16 features in this dataset and one of the many questions that can be answered is “What is the correlation between vaccination rates and hospitalization rates between US States “? There are a number of features that are included in the table such as date, location, total vaccinations, total vaccinations per hundred/million, daily vaccinations, and many more columns.
+## Introduction:
+## COVID-19 is extremely rampant and dangerous in many parts of the world, causing data analysis to be necessary in order to find the best means of prevention amongst all age groups, races, and genders. Amongst the multitude of data analysis projects regarding COVID-19 cases, there seems to be a lack of projects focusing on the vaccination rates and strategies for combatting this horrible pandemic. The dataset that we used for our analysis was created by Paul Mooney, who took data derived from ourworldindata.org and organized it into a dataset. There are 33812 observations and 16 features in this dataset and one of the many questions that can be answered is “What is the correlation between vaccination rates and hospitalization rates between US States “? There are a number of features that are included in the table such as date, location, total vaccinations, total vaccinations per hundred/million, daily vaccinations, and many more columns.
 
 
-Summary
+## Summary Information Paragraph:
+## From the data, we can conclude and have Rstudio calculate many values for us. These include the maximum people vaccinated which was 260327743. The minimum number of people vaccinated was 401 people. The average number of people vaccinated was 5721753 people. The maximum number of people vaccinated in one day was 3384387 and the average number of people vaccinated daily was about 35715. This is the summary of the code that was written to calculate these values.
+
+Coviddata <- read.csv("D:/us_state_vaccinations.csv")
+View(Coviddata)
+
+summary(Coviddata)
+
+summary_info <- list()
+summary_info$num_observations <- nrow(Coviddata)
+summary_info$people_vaccinated_max_value <- Coviddata %>%
+  filter(people_vaccinated == max(people_vaccinated, na.rm = T)) %>%
+  select(people_vaccinated)
+summary_info$people_vaccinated_min_value <- Coviddata %>%
+  filter(people_vaccinated == min(people_vaccinated, na.rm = T)) %>%
+  select(people_vaccinated)
+summary_info$people_vaccinated_avg <- Coviddata %>%
+  summarise(mean(people_vaccinated, trim = 0, na.rm = T))
+summary_info$num_features <-ncol(Coviddata)
+summary_info$daily_vaccinations_max_value <- Coviddata %>%
+  filter(daily_vaccinations == max(daily_vaccinations, na.rm = T)) %>%
+  select(daily_vaccinations)
+summary_info$daily_vaccinations_avg <- Coviddata %>%
+  summarise(mean(daily_vaccinations, trim = 0, na.rm = T))
+print(summary_info)
+
+##Summary Table:
+##Pertinent Observations About Summary Table:
+  
+##Chart 1:
+Coviddata <- read.csv("D:/us_state_vaccinations.csv")
+
+barplot(Coviddata$daily_vaccinations, names = Coviddata$date, ylim = c(0, 3500000), ylab = 'Daily # of Vaccinations', xlab = 'Date in 2021', main = 'Distribution of COVID Vaccinations Over Time in 2021')
+
+## Caption/Pertinent Observations: This bar chart was intended to show how the vaccination rates for COVID-19 during the middle of 2021 pandemic flunctuated greatly throughout the year with the greatest vaccination rates being for between November and January. Some other pertinent observation regarding this chart would be that the beginning of each month usually contained the highest rates of vaccination rather than the ending of the month. This seems to be a trend all throughout the year. The vaccination rate in January was almost quadruple what is was in April.
+
+## Chart 2:
+  
+## aption/Pertinent Observations:
+ 
+ 
+## Chart 3:
+  
+## Caption/Pertinent Observations:
   
  
