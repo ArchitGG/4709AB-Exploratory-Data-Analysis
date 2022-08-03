@@ -4,28 +4,19 @@ View(CovidData)
 
 library(dplyr)
 
+na.omit(
 CovidData %>%
-group_by(people_vaccinated) %>%
-  summarize(freq = n())
-arrange(desc(freq))
+rename(Location = "location") %>%
+group_by(Location) %>%
+summarize(total_vaccinations, people_vaccinated, people_fully_vaccinated, daily_vaccinations, total_boosters))
 
-CovidData %>%
-  group_by(total_vaccinations) %>%
-  summarize(freq = n())
-arrange(desc(freq))
+data_round <- CovidData %>%
+  mutate_if(is.numeric,
+            round,
+            digits = 5)
+View(data_round2)
 
-CovidData %>%
-  group_by(people_fully_vaccinated) %>%
-  summarize(freq = n())
-arrange(desc(freq))
+table_1 <- table(CovidData$total_vaccinations, CovidData$people_fully_vaccinated)
 
-CovidData %>%
-  group_by(daily_vaccinations) %>%
-  summarize(freq = n())
-arrange(desc(freq))
-
-CovidData %>%
-  group_by(total_boosters) %>%
-  summarize(freq = n())
-arrange(desc(freq))
+table(CovidData$total_vaccinations, CovidData$people_fully_vaccinated)
 
