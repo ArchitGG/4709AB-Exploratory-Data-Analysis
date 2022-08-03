@@ -46,9 +46,15 @@ barplot(Coviddata$daily_vaccinations, names = Coviddata$date, ylim = c(0, 350000
 ## Caption/Pertinent Observations: This bar chart was intended to show how the vaccination rates for COVID-19 during the middle of 2021 pandemic flunctuated greatly throughout the year with the greatest vaccination rates being for between November and January. Some other pertinent observation regarding this chart would be that the beginning of each month usually contained the highest rates of vaccination rather than the ending of the month. This seems to be a trend all throughout the year. The vaccination rate in January was almost quadruple what is was in April.
 
 ## Chart 2:
+library(readr)
+CovidData <- read_csv("C:/Users/ArchitGG/Desktop/us_state_vaccinations.csv")
+View(CovidData)
+
+chart_2 <- plot(CovidData$total_distributed, CovidData$people_vaccinated, main = "Covid Vaccinations Distributed vs People Vaccinated",
+     xlab = "TotalDistributedVaccinations", ylab = "TotalPeopleVaccinated")
+abline(lm(TotalDistributedVaccinations~TotalPeopleVaccinated, data = CovidData, col ="red" )
   
-## Caption/Pertinent Observations:
- 
+## Caption/Pertinent Observations:Chart 2 was intended to show the relationship between the number of vaccine doses distributed and the number of people vaccinated. As seen in the plot itself, as the number of vaccine doses distributed increased, the number of people getting vaccinated increased until a little plateau near the end of the x and y axis. The plateau could have to do with enough people recieving doses and an influx of doses being distributed still.
  
 ## Chart 3:
   
