@@ -9,6 +9,17 @@ output: html_document
 ##COVID-19 is extremely rampant and dangerous in many parts of the world, causing data analysis to be necessary in order to find the best means of prevention amongst all age groups, races, and genders. Amongst the multitude of data analysis projects regarding COVID-19 cases, there seems to be a lack of projects focusing on the vaccination rates and strategies for combatting this horrible pandemic. The dataset that we used for our analysis was created by Paul Mooney, who took data derived from ourworldindata.org and organized it into a dataset. There are 33812 observations and 16 features in this dataset and one of the many questions that can be answered is “What is the correlation between vaccination rates and hospitalization rates between US States “? There are a number of features that are included in the table such as date, location, total vaccinations, total vaccinations per hundred/million, daily vaccinations, and many more columns.
 
 
-Summary
+##Summary
   
- 
+
+
+
+
+
+
+
+##Chart 2
+##Chart 2 was intended to show the relationship between the number of vaccine doses distributed and the number of people vaccinated. As seen in the plot itself, as the number of vaccine doses distributed increased, the number of people getting vaccinated increased until a little plateau near the end of the x and y axis. The plateau could have to do with enough people recieving doses and an influx of doses being distributed still.
+
+x <- "http://127.0.0.1:13087/graphics/dfb2165c-1eda-4132-8193-4857698eb907.png"    
+
