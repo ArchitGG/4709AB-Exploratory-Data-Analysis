@@ -1,8 +1,0 @@
-library(readr)
-CovidData <- read_csv("C:/Users/ArchitGG/Desktop/COVID-19_Case_Surveillance_Public_Use_Data.csv")
-View(CovidData)
-
-data1$sex
-data1$age_group
-
-
