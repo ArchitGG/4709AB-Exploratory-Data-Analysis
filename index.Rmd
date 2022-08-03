@@ -47,7 +47,7 @@ barplot(Coviddata$daily_vaccinations, names = Coviddata$date, ylim = c(0, 350000
 
 ## Chart 2:
   
-## aption/Pertinent Observations:
+## Caption/Pertinent Observations:
  
  
 ## Chart 3:
