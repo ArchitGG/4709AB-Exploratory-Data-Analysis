@@ -5,8 +5,9 @@ date: '2022-08-02'
 output: html_document
 
 ## R Markdown
-Introduction
-  This dataset is included and from a database that includes individual-level data which was reported to the US by New York City and the District of Columbia. This data set includes the immediately notifiable and urgent (within 24 hours) Covid 19 cases and data about hospitalizations that can be used to answer our questions as well. The data from this dataset contains researched numbers regarding demographic characteristics, exposure history, disease severity indicators/outcomes, clinical data, laboratory diagnostic test results, and comorbidities. COVID-19 is extremely rampant and dangerous in many parts of the world, causing data analysis to be necessary in order to find the best means of prevention amongst all age groups, races, and genders.
+##Introduction:
+##COVID-19 is extremely rampant and dangerous in many parts of the world, causing data analysis to be necessary in order to find the best means of prevention amongst all age groups, races, and genders. Amongst the multitude of data analysis projects regarding COVID-19 cases, there seems to be a lack of projects focusing on the vaccination rates and strategies for combatting this horrible pandemic. The dataset that we used for our analysis was created by Paul Mooney, who took data derived from ourworldindata.org and organized it into a dataset. There are 33812 observations and 16 features in this dataset and one of the many questions that can be answered is “What is the correlation between vaccination rates and hospitalization rates between US States “? There are a number of features that are included in the table such as date, location, total vaccinations, total vaccinations per hundred/million, daily vaccinations, and many more columns.
+
 
 Summary
   
