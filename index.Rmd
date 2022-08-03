@@ -3,28 +3,11 @@ title: "index"
 author: "Archit Gubiligari, Ankit Gubiligari, Christine Park"
 date: '2022-08-02'
 output: html_document
----
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
 
 ## R Markdown
+Introduction
+  This dataset is included and from a database that includes individual-level data which was reported to the US by New York City and the District of Columbia. This data set includes the immediately notifiable and urgent (within 24 hours) Covid 19 cases and data about hospitalizations that can be used to answer our questions as well. The data from this dataset contains researched numbers regarding demographic characteristics, exposure history, disease severity indicators/outcomes, clinical data, laboratory diagnostic test results, and comorbidities. COVID-19 is extremely rampant and dangerous in many parts of the world, causing data analysis to be necessary in order to find the best means of prevention amongst all age groups, races, and genders.
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r cars}
-summary(cars)
-```
-
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+Summary
+  
+  
