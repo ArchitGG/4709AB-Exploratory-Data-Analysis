@@ -12,6 +12,8 @@ output: html_document
 ## Summary Information Paragraph:
 ## From the data, we can conclude and have Rstudio calculate many values for us. These include the maximum people vaccinated which was 260327743. The minimum number of people vaccinated was 401 people. The average number of people vaccinated was 5721753 people. The maximum number of people vaccinated in one day was 3384387 and the average number of people vaccinated daily was about 35715. This is the summary of the code that was written to calculate these values.
 
+```{r}
+
 Coviddata <- read.csv("D:/us_state_vaccinations.csv")
 View(Coviddata)
 
@@ -34,6 +36,8 @@ summary_info$daily_vaccinations_max_value <- Coviddata %>%
 summary_info$daily_vaccinations_avg <- Coviddata %>%
   summarise(mean(daily_vaccinations, trim = 0, na.rm = T))
 print(summary_info)
+
+```
 
 ##Summary Table:
 ##Pertinent Observations About Summary Table: The data that is revealed in this table is included because it allows for better analysis about the Covid Pandemic Situation and provides information on total vaccinations, people vaccinated, people fully vaccinated, daily vaccinations, total boosters that are administered throughout the US. I chose to include this table because it is grouped by location and is easy to see which states and places are struggling to keep up with the pandemic.
