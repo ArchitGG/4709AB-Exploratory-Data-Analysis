@@ -1,0 +1,59 @@
+---
+title: "COVID-19 Vaccinations in the United States"
+author: "Archit Gubiligari, Ankit Gubiligari, Christine Park"
+date: '2022-08-02'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+source("Summary.R")
+source("Table.R")
+source("Chart 1.R")
+source("Chart 2.R")
+source("Chart 3.R")
+
+library("knitr")
+```
+
+
+## R Markdown
+## Introduction:
+For our Exploratory Data Analysis, we decided to take a closer look into COVID-19 Vaccinations. COVID-19 is extremely rampant and dangerous in many parts of the world, causing data analysis to be necessary in order to find the best means of prevention amongst all age groups, races, and genders. Amongst the multitude of data analysis projects regarding COVID-19 cases, there seems to be a lack of projects focusing on the vaccination rates and strategies for combatting this horrible pandemic. The dataset that we used for our analysis was created by Paul Mooney, who took data derived from ourworldindata.org and organized it into a dataset. There are 33812 observations and 16 features in this dataset and one of the many questions that can be answered is “What is the correlation between vaccination rates and hospitalization rates between US States “? There are a number of features that are included in the table such as date, location, total vaccinations, total vaccinations per hundred/million, daily vaccinations, and many more columns.
+
+
+## Summary Information Paragraph:
+From the data, we can conclude and have Rstudio calculate many values for us. These include the maximum people vaccinated which was 260327743. The minimum number of people vaccinated was 401 people. The average number of people vaccinated was 5721753 people. The maximum number of people vaccinated in one day was 3384387 and the average number of people vaccinated daily was about 35715. This is the summary of the code that was written to calculate these values.
+
+##Summary Table:
+```{r}
+
+```
+##Pertinent Observations About Summary Table:
+The data that is revealed in this table is included because it allows for better analysis about the Covid Pandemic Situation and provides information on total vaccinations, people vaccinated, people fully vaccinated, daily vaccinations, total boosters that are administered throughout the US. I chose to include this table because it is grouped by location and is easy to see which states and places are struggling to keep up with the pandemic.
+  
+##Chart 1:
+```{r}
+daily_num_vacc_2021
+```
+
+## Caption/Pertinent Observations:
+This bar chart was intended to show how the vaccination rates for COVID-19 during the middle of 2021 pandemic flunctuated greatly throughout the year with the greatest vaccination rates being for between November and January. Some other pertinent observation regarding this chart would be that the beginning of each month usually contained the highest rates of vaccination rather than the ending of the month. This seems to be a trend all throughout the year. The vaccination rate in January was almost quadruple what is was in April.
+
+## Chart 2:
+
+```{r}
+total_dist_vacc
+```
+  
+## Caption/Pertinent Observations:
+Chart 2 was intended to show the relationship between the number of vaccine doses distributed and the number of people vaccinated. As seen in the plot itself, as the number of vaccine doses distributed increased, the number of people getting vaccinated increased until a little plateau near the end of the x and y axis. The plateau could have to do with enough people recieving doses and an influx of doses being distributed still.
+ 
+## Chart 3:
+```{r}
+us_vaccine_per_100
+```
+  
+## Caption/Pertinent Observations:
+The line graph in Chart 3 was intended to show the relationship between the number of vaccines administered or made available, per hundred vaccines, and the number of people who are fully vaccinated, per hundred people. There is a positive correlation between the two variables, thus showing that the move vaccines that were made available, the more people were fully vaccinated, 
