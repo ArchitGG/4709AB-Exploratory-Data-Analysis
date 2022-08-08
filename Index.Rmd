@@ -28,7 +28,7 @@ From the data, we can conclude and have Rstudio calculate many values for us. Th
 
 ##Summary Table:
 ```{r}
-
+table_1
 ```
 ##Pertinent Observations About Summary Table:
 The data that is revealed in this table is included because it allows for better analysis about the Covid Pandemic Situation and provides information on total vaccinations, people vaccinated, people fully vaccinated, daily vaccinations, total boosters that are administered throughout the US. I chose to include this table because it is grouped by location and is easy to see which states and places are struggling to keep up with the pandemic.
